@@ -23,4 +23,12 @@
 	<%= @project.description %>
 </p>
 
-<%= link_to "Home", root_path%>
+<header>
+	<h1>Tickets</h1>
+
+	<ul class="actions">
+		<li><%= link_to "New Ticket", new_project_ticket_path(@project), class: "new" %></li>
+	</ul>
+</header>
+
+<h2></h2>
