@@ -3,4 +3,5 @@ class Ticket < ActiveRecord::Base
 	validates :description, presence: true
 
   belongs_to :project
+  belongs_to :author, class_name: "User"
 end
