@@ -31,4 +31,9 @@
 	</ul>
 </header>
 
-<h2></h2>
+<ul id="tickets">
+	<% @project.tickets.each do |ticket| %>
+		<li>#<%= ticket.id %></li>
+		<li><%= link_to ticket.name, [@project, ticket] %></li>
+	<% end %>
+</ul>
