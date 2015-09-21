@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+	root 'projects#index'
+	
   devise_for :users
 
   resources :projects, only: [:index, :show, :edit, :update] do
@@ -9,6 +11,4 @@ Rails.application.routes.draw do
   	root 'application#index'
   	resources :projects, only: [:new, :create, :destroy]
   end
-
-  root 'projects#index'
 end
