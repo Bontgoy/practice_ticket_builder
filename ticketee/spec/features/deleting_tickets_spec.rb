@@ -7,6 +7,8 @@ RSpec.feature "Users can delete tickets" do
 	let(:ticket) { FactoryGirl.create(:ticket, author: author, project: project) }
 
 	before do
+		login_as(author)
+		assign_role!(author, :viewer, project)
 		visit project_ticket_path(project, ticket)
 	end
 
